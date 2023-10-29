@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- nav -->
+    <div class="header" id="Home">
+      <div class="header-container">
+        <div class="header-box">
+        <div class="nav">
+           <div class="nav-logo">
+            <img src="./27867-removebg-preview.png" alt="logo">
+           </div>
+           <div class="nav-center">
+            <a class="Home-nav" href="index.html">Home</a>
+            <a class="About-nav" href="about.html">About</a>
+            <a class="Historical-nav" href="#history">Historical Event</a>
+            <a class="Overview-nav" href="#overview">Overview</a>
+           </div>
+           <div class="nav-right">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-twitter"></i>
+           </div>
+        </div>
+        <div class="main-body">
+            <div class="main-left">
+              <h1 class="Opening">Welcome to the Haloween libary</h1>     
+              <p class="info">This is where y'all shall find the history about the Halloween</p>
+            </div>
+            <div class="main-right">
+                <img src="./halloween-23439_1920.png" alt="PIc">
+            </div>
+        </div>  
+        </div>
+      </div>
+    </div>
+    <!-- nav -->    
+    <!--about-->
+    <div class="about" id="aBout">
+      <div class="about-container">
+        <div class="about-left">
+          <img src="./171587.jpg" alt="PIc">
+       
+        </div>
+        <div class="about-right">
+          <div class="Opening2">THE SUMMARY OF HALLOWEEN CREATION<h1>
+          <p class="info2">The tradition originated with the ancient Celtic festival of Samhain, when people would light bonfires and wear costumes to ward off ghosts. In the eighth century, Pope Gregory III designated November 1 as a time to honor all saints. Soon, All Saints Day incorporated some of the traditions of Samhain. The evening before was known as All Hallows Eve, and later Halloween. Over time, Halloween evolved into a day of activities like trick-or-treating, carving jack-o-lanterns, festive gatherings, donning costumes and eating treats.</p>
+        </div>
+      </div>
+    </div>
+    <!--about-->
+    <!-- Historical-event -->
+    <div class="history" id="history">
+      <div class="his-container">
+        <div class="left-his">
+          <h1 class="title">Historic Things That Happened on Halloween</h1>
+          <div class="event">
+            <p>1828:</p>
+            <p> POLLS OPEN ON THE 11TH AMERICAN PRESIDENTIAL ELECTION</p>
+          </div>
+          <div class="event" style="text-align: right;">
+            <p>:1837</p>
+            <p> HUNDREDS OF CREEK INDIANS KILLED IN THE WRECK OF THE MONMOUTH</p>
+          </div>
+          <div class="event" style="text-align: left;">
+            <p>1864:</p>
+            <p> NEVADA IS ADMITTED AS THE 36TH STATE</p>
+          </div><div class="event" style="text-align: right;">
+            <p>:1917</p>
+            <p> BRITAIN BREAKS THE OTTOMANS AT THE BATTLE OF BEERSHEBAH</p>
+          </div><div class="event" style="text-align: left;">
+            <p>1926:</p>
+            <p> THE STRANGE DEATH OF HARRY HOUDINI</p>
+          </div><div class="event" style="text-align: right;">
+            <p>:1914</p>
+            <p> SINKING OF THE REUBEN JAMES BY GERMAN U-BOAT </p>
+          </div>
+        </div>
+        <div class="right-his">
+          <img src="./441984.jpg" alt="POG">
+        </div>
+      </div>
+    </div>
+    <!-- Historical-event -->
+    <!-- Overview -->
+    <div class="overview" id="overview">
+    <div class="over-container">
+      <div style="text-align:center">
+        <h2 class="title">Halloween Image Gallery</h2>
+        <p>Click on the images below:</p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="./1.jpg" alt="POG" style="width:100%; height: 200px;" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="./2.jpg" alt="POG" style="width:100%; height: 200px;" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="./3.jpg" alt="POG" style="width:100%; height: 200px;" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="./4.jpg" alt="POG" style="width:100%; height: 200px;" onclick="myFunction(this);">
+        </div>
+      </div>
+      
+      <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+      </div>
+      
+      <script>
+      function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+      }
+      </script>
+    </div>
+    </div>
+  </div>
+    <!-- Overview -->
+    <!-- Comment -->
+    <div class="Comment">
+      <div class="com-container">
+        <div id="respond">
+          <h3 class="title">Leave a Comment</h3>
+        
+          <form action="post_comment.php" method="post" id="commentform">
+        
+            <label for="comment_author" class="required">Your name</label>
+            <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
+        
+            <label for="email" class="required">Your email;</label>
+            <input type="email" name="email" id="email" value="" tabindex="2" required="required">
+        
+            <label for="comment" class="required">Your message</label>
+            <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
+            <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
+            <input name="submit" type="submit" value="Submit comment" />
+        
+          </form>
+        
+        </div>
+      </div>
+    </div>
+    <!-- Comment -->
+    <!-- footer -->
+    <div class="foot-container">
+      <footer class="foot">
+        <p class="fo">Author: Tung</p>
+        <p class="fo">© 2023 Halloween libary</p>
+        <p class="fo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum varius sit amet. Eget arcu dictum varius duis. In mollis nunc sed id semper risus in hendrerit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Dui faucibus in ornare quam viverra orci sagittis. Nulla pellentesque dignissim enim sit amet. Blandit volutpat maecenas volutpat blandit aliquam etiam erat. Nisi est sit amet facilisis magna etiam tempor. Pellentesque habitant morbi tristique senectus. Odio eu feugiat pretium nibh ipsum consequat.</p>
+      </footer>
+    </div>
+    <!-- footer -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="fo">Top</button>
+    <script>
+      let mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
+}
+    </script>
+</body>
+</html>
